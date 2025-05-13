@@ -1,11 +1,12 @@
 buildscript {
     repositories {
         google()
-        jcenter()
+//        jcenter()
+        mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.0.0'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
+//        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }
@@ -13,7 +14,8 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
+//        jcenter()
+        mavenCentral()
     }
 }
 
@@ -35,9 +37,6 @@ ext {
     robolectricShadowsSupport = "org.robolectric:shadows-support-v4:$robolectricVersion"
     // Workaround for https://github.com/robolectric/robolectric/issues/1932
     khronosOpenGLApi = "org.khronos:opengl-api:gl1.1-android-2.1_r1"
-
-    bintrayRepo = 'tbruyelle'
-    bintrayName = 'RxPermissions3'
 
     publishedGroupId = 'com.tbruyelle.rxpermissions3'
     artifact = 'rxpermissions'
